@@ -3,7 +3,7 @@ import axios from 'axios';
 export const API_BASE = 'https://jojoscoops.kesug.com';
 
 const cartApi = axios.create({
-  baseURL: `${API_BASE}/backend/cart_api.php`,
+  baseURL: `${API_BASE}/cart_api.php`,
   withCredentials: true,
 });
 

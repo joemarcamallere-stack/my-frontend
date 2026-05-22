@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-export const API_BASE = 'https://jojoscoops.kesug.com/';
+export const API_BASE = 'https://jojoscoops.kesug.com';
 
 const adminApi = axios.create({
-  baseURL: `${API_BASE}/backend/admin_api.php`,
+  baseURL: `${API_BASE}/admin_api.php`,
   withCredentials: true,
 });
 
