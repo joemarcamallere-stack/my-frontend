@@ -24,7 +24,7 @@ export default function AdminUsers() {
         setUsers([]);
       }
     } catch {
-      setError('Could not connect to the server. Check that XAMPP is running.');
+      setError('Could not connect to the server. Please try again later.');
       setUsers([]);
     } finally {
       setLoading(false);

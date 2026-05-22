@@ -206,7 +206,7 @@ export default function Cart() {
         showApiToast(showToast, res, { success: 'Cart updated.', error: 'Could not update cart.' });
       }
     } catch {
-      showToast('Could not update cart. Check that XAMPP is running.', 'error');
+      showToast('Could not update cart. Please try again later.', 'error');
     }
   };
 
@@ -229,7 +229,7 @@ export default function Cart() {
         reload();
       }
     } catch {
-      showToast('Could not remove item. Check that XAMPP is running.', 'error');
+      showToast('Could not remove item. Please try again later.', 'error');
     }
   };
 
@@ -242,7 +242,7 @@ export default function Cart() {
       saveSelection(new Set());
       reload();
     } catch {
-      showToast('Could not clear cart. Check that XAMPP is running.', 'error');
+      showToast('Could not clear cart. Please try again later.', 'error');
     }
   };
 
@@ -306,7 +306,7 @@ export default function Cart() {
         showApiToast(showToast, res, { error: 'Unable to place order.' });
       }
     } catch {
-      showToast('Could not place order. Check that XAMPP is running.', 'error');
+      showToast('Could not place order. Please try again later.', 'error');
     } finally {
       setPlacing(false);
     }

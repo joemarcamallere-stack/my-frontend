@@ -71,7 +71,7 @@ export default function Orders() {
         setExpanded((prev) => new Set([...prev, String(highlight)]));
       }
     } catch {
-      showToast('Could not load orders. Check that XAMPP is running.', 'error');
+      showToast('Could not load orders. Please try again later.', 'error');
     } finally {
       if (!silent) setLoading(false);
     }

@@ -77,7 +77,7 @@ export default function Menu() {
         showApiToast(showToast, res, { error: 'Could not add to cart.' });
       }
     } catch {
-      showToast('Could not add to cart. Check that XAMPP is running.', 'error');
+      showToast('Could not add to cart. Please try again later.', 'error');
     }
   };
 
