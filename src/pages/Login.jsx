@@ -40,7 +40,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post('https://jojoscoops.kesug.com/Project/backend/auth_api.php?action=login', {
+      const res = await axios.post('https://jojoscoops.kesug.com/auth_api.php?action=login', {
         username,
         password
       }, {

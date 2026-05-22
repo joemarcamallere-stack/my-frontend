@@ -42,7 +42,7 @@ export default function About() {
 
         <div className="image-side">
           <div className="image-wrapper">
-            <img src="https://jojoscoops.kesug.com/Project/images/icream.png" alt="Ice Cream Bowl" />
+            <img src="https://jojoscoops.kesug.com/icream.png" alt="Ice Cream Bowl" />
 
             <div className="decoration butterfly" aria-hidden="true">🦋</div>
             <div className="decoration flower" aria-hidden="true">🌸</div>

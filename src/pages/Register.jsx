@@ -34,7 +34,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      const res = await axios.post('https://jojoscoops.kesug.com/Project/backend/auth_api.php?action=signup', {
+      const res = await axios.post('https://jojoscoops.kesug.com/auth_api.php?action=signup', {
         fullname,
         email,
         username,

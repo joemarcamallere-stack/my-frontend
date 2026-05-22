@@ -2,7 +2,7 @@ import axios from 'axios';
 import { API_BASE } from './cartApi';
 
 const ordersApi = axios.create({
-  baseURL: `${API_BASE}/backend/orders_api.php`,
+  baseURL: `${API_BASE}/orders_api.php`,
   withCredentials: true,
 });
 

@@ -26,7 +26,7 @@ export default function Menu() {
   };
 
   useEffect(() => {
-    axios.get('https://jojoscoops.kesug.com/Project/backend/products_api.php')
+    axios.get('https://jojoscoops.kesug.com/roducts_api.php')
       .then(res => {
         const normalized = (res.data.products || []).map((p, i) => ({
           id: Number(p.id),
