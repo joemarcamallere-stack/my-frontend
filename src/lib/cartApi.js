@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API_BASE = 'https://jojoscoops.kesug.com';
+export const API_BASE = import.meta.env.VITE_API_URL || 'https://jojoscoops.kesug.com';
 
 const cartApi = axios.create({
   baseURL: `${API_BASE}/cart_api.php`,
