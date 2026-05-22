@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { API_BASE } from '../lib/cartApi';
 // import '../styles/about_us.css'; // Add this to App.jsx instead
 
 export default function About() {
@@ -42,7 +43,7 @@ export default function About() {
 
         <div className="image-side">
           <div className="image-wrapper">
-            <img src="https://jojoscoops.kesug.com/icream.png" alt="Ice Cream Bowl" />
+            <img src={`${API_BASE}/icream.png`} alt="Ice Cream Bowl" />
 
             <div className="decoration butterfly" aria-hidden="true">🦋</div>
             <div className="decoration flower" aria-hidden="true">🌸</div>

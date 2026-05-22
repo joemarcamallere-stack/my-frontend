@@ -45,6 +45,6 @@ export async function placeOrder(payload) {
 }
 
 export async function fetchCartCount() {
-  const res = await fetch(`${API_BASE}/backend/cart_count.php`, { credentials: 'include' });
+  const res = await fetch(`${API_BASE}/cart_count.php`, { credentials: 'include' });
   return res.json();
 }

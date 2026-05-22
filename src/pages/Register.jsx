@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { API_BASE } from '../lib/cartApi';
 import '../styles/login.css'; // use same interface as login
 import { useToast } from '../context/ToastContext';
 
@@ -34,7 +35,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      const res = await axios.post('https://jojoscoops.kesug.com/auth_api.php?action=signup', {
+      const res = await axios.post(`${API_BASE}/auth_api.php?action=signup`, {
         fullname,
         email,
         username,

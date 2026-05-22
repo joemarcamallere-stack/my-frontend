@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { addToCart } from '../lib/cartApi';
+import { addToCart, API_BASE } from '../lib/cartApi';
 import { projectImage } from '../lib/checkoutUtils';
 import { useToast } from '../context/ToastContext';
 import { showApiToast } from '../lib/toastHelpers';
@@ -26,7 +26,7 @@ export default function Menu() {
   };
 
   useEffect(() => {
-    axios.get('https://jojoscoops.kesug.com/roducts_api.php')
+    axios.get(`${API_BASE}/products_api.php`)
       .then(res => {
         const normalized = (res.data.products || []).map((p, i) => ({
           id: Number(p.id),

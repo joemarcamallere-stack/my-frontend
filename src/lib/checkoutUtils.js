@@ -26,8 +26,10 @@ export function formatMoney(amount) {
   return `₱${Number(amount || 0).toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 }
 
+import { API_BASE } from './cartApi';
+
 export function projectImage(path) {
-  if (!path) return 'https://jojoscoops.kesug.com/images/ice_cream.png';
+  if (!path) return `${API_BASE}/images/ice_cream.png`;
   if (path.startsWith('http')) return path;
-  return `https://jojoscoops.kesug.com/${path.replace(/^\//, '')}`;
+  return `${API_BASE}/${path.replace(/^\//, '')}`;
 }

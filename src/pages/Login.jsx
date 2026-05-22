@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { markAuthClientState } from '../lib/adminApi';
+import { API_BASE } from '../lib/cartApi';
 import '../styles/login.css';
 import { useToast } from '../context/ToastContext';
 
@@ -40,7 +41,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post('https://jojoscoops.kesug.com/auth_api.php?action=login', {
+      const res = await axios.post(`${API_BASE}/auth_api.php?action=login`, {
         username,
         password
       }, {

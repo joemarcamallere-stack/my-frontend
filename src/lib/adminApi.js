@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-export const API_BASE = 'https://jojoscoops.kesug.com';
+import { API_BASE } from './cartApi';
 
 const adminApi = axios.create({
   baseURL: `${API_BASE}/admin_api.php`,
@@ -59,7 +58,7 @@ export async function fetchProduct(id) {
 }
 
 export async function addProduct(formData) {
-  const { data } = await axios.post(`${API_BASE}/backend/admin_api.php?action=add_product`, formData, {
+  const { data } = await axios.post(`${API_BASE}/admin_api.php?action=add_product`, formData, {
     withCredentials: true,
     headers: { 'Content-Type': 'multipart/form-data' },
   });
@@ -67,7 +66,7 @@ export async function addProduct(formData) {
 }
 
 export async function updateProduct(formData) {
-  const { data } = await axios.post(`${API_BASE}/backend/admin_api.php?action=update_product`, formData, {
+  const { data } = await axios.post(`${API_BASE}/admin_api.php?action=update_product`, formData, {
     withCredentials: true,
     headers: { 'Content-Type': 'multipart/form-data' },
   });
@@ -110,13 +109,13 @@ export async function updateOrderStatus(id, status) {
 }
 
 export async function checkAuth() {
-  const { data } = await axios.get(`${API_BASE}/backend/auth_api.php?action=check_auth`, { withCredentials: true });
+  const { data } = await axios.get(`${API_BASE}/auth_api.php?action=check_auth`, { withCredentials: true });
   return data;
 }
 
 export async function logout() {
   const { data } = await axios.post(
-    `${API_BASE}/backend/auth_api.php?action=logout`,
+    `${API_BASE}/auth_api.php?action=logout`,
     {},
     {
       withCredentials: true,
