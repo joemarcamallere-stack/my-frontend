@@ -23,7 +23,7 @@ export default function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     setError('');
-    
+
     if (password !== confirmPassword) {
       const msg = 'Passwords do not match!';
       setError(msg);
@@ -34,7 +34,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost/Project/backend/auth_api.php?action=signup', {
+      const res = await axios.post('https://jojoscoops.kesug.com/Project/backend/auth_api.php?action=signup', {
         fullname,
         email,
         username,
@@ -92,62 +92,62 @@ export default function Register() {
           <form className="login-form" onSubmit={handleRegister}>
             <label htmlFor="fullname">
               Full Name
-              <input 
-                id="fullname" 
-                type="text" 
-                name="fullname" 
-                placeholder="Enter full name" 
+              <input
+                id="fullname"
+                type="text"
+                name="fullname"
+                placeholder="Enter full name"
                 value={fullname}
                 onChange={e => setFullname(e.target.value)}
-                required 
+                required
               />
             </label>
             <label htmlFor="email">
               Email
-              <input 
-                id="email" 
-                type="email" 
-                name="email" 
-                placeholder="Enter email" 
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Enter email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                required 
+                required
               />
             </label>
             <label htmlFor="username">
               Username
-              <input 
-                id="username" 
-                type="text" 
-                name="username" 
-                placeholder="Choose a username" 
+              <input
+                id="username"
+                type="text"
+                name="username"
+                placeholder="Choose a username"
                 value={username}
                 onChange={e => setUsername(e.target.value)}
-                required 
+                required
               />
             </label>
             <label htmlFor="password">
               Password
-              <input 
-                id="password" 
-                type="password" 
-                name="password" 
-                placeholder="Choose a password" 
+              <input
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Choose a password"
                 value={password}
                 onChange={e => setPassword(e.target.value)}
-                required 
+                required
               />
             </label>
             <label htmlFor="confirm_password">
               Confirm Password
-              <input 
-                id="confirm_password" 
-                type="password" 
-                name="confirm_password" 
-                placeholder="Confirm password" 
+              <input
+                id="confirm_password"
+                type="password"
+                name="confirm_password"
+                placeholder="Confirm password"
                 value={confirmPassword}
                 onChange={e => setConfirmPassword(e.target.value)}
-                required 
+                required
               />
             </label>
             <button className="btn-login" type="submit" disabled={loading}>

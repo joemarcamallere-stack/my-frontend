@@ -26,7 +26,7 @@ export default function Menu() {
   };
 
   useEffect(() => {
-    axios.get('http://localhost/Project/backend/products_api.php')
+    axios.get('https://jojoscoops.kesug.com/Project/backend/products_api.php')
       .then(res => {
         const normalized = (res.data.products || []).map((p, i) => ({
           id: Number(p.id),
@@ -90,9 +90,9 @@ export default function Menu() {
           <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
             <div>
               {['All', 'Frozen Dessert', 'Ice Cream', 'Chocolate', 'Specialty'].map(cat => (
-                <button 
-                  key={cat} 
-                  className={`filter-btn ${categoryFilter === cat ? 'active' : ''}`} 
+                <button
+                  key={cat}
+                  className={`filter-btn ${categoryFilter === cat ? 'active' : ''}`}
                   type="button"
                   onClick={() => setCategoryFilter(cat)}
                 >
@@ -144,9 +144,9 @@ export default function Menu() {
                     <span>Qty</span>
                     <input type="number" name="quantity" min="1" max={Math.max(product.stock, 1)} defaultValue="1" disabled={product.stock === 0} />
                   </label>
-                  <div className="card-actions" style={{display: 'flex', gap: '8px', marginTop: '12px'}}>
-                    <button type="submit" name="action" value="add" className="details-btn" style={{flex: 1, padding: '10px', borderRadius: '10px', background: '#ffe6f0', color: '#ff4d8d', border: 'none', cursor: 'pointer', fontWeight: 'bold'}} disabled={product.stock === 0}>Add to Cart</button>
-                    <button type="button" className="details-btn filled" style={{flex: 1, padding: '10px', borderRadius: '10px', background: '#ff4d8d', color: '#fff', border: 'none', cursor: 'pointer', fontWeight: 'bold'}} disabled={product.stock === 0} onClick={(e) => handleAddToCart(e, product, true)}>Buy Now</button>
+                  <div className="card-actions" style={{ display: 'flex', gap: '8px', marginTop: '12px' }}>
+                    <button type="submit" name="action" value="add" className="details-btn" style={{ flex: 1, padding: '10px', borderRadius: '10px', background: '#ffe6f0', color: '#ff4d8d', border: 'none', cursor: 'pointer', fontWeight: 'bold' }} disabled={product.stock === 0}>Add to Cart</button>
+                    <button type="button" className="details-btn filled" style={{ flex: 1, padding: '10px', borderRadius: '10px', background: '#ff4d8d', color: '#fff', border: 'none', cursor: 'pointer', fontWeight: 'bold' }} disabled={product.stock === 0} onClick={(e) => handleAddToCart(e, product, true)}>Buy Now</button>
                   </div>
                 </form>
               </div>

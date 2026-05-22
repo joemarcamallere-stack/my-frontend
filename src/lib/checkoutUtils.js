@@ -27,7 +27,7 @@ export function formatMoney(amount) {
 }
 
 export function projectImage(path) {
-  if (!path) return 'http://localhost/Project/images/ice_cream.png';
+  if (!path) return 'https://jojoscoops.kesug.com/Project/images/ice_cream.png';
   if (path.startsWith('http')) return path;
-  return `http://localhost/Project/${path.replace(/^\//, '')}`;
+  return `https://jojoscoops.kesug.com/Project/${path.replace(/^\//, '')}`;
 }

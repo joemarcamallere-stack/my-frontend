@@ -40,7 +40,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost/Project/backend/auth_api.php?action=login', {
+      const res = await axios.post('https://jojoscoops.kesug.com/Project/backend/auth_api.php?action=login', {
         username,
         password
       }, {
@@ -110,26 +110,26 @@ export default function Login() {
           <form className="login-form" onSubmit={handleLogin}>
             <label htmlFor="username">
               Username
-              <input 
-                id="username" 
-                type="text" 
-                name="username" 
-                placeholder="Enter username" 
+              <input
+                id="username"
+                type="text"
+                name="username"
+                placeholder="Enter username"
                 value={username}
                 onChange={e => setUsername(e.target.value)}
-                required 
+                required
               />
             </label>
             <label htmlFor="password">
               Password
-              <input 
-                id="password" 
-                type="password" 
-                name="password" 
-                placeholder="Enter password" 
+              <input
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Enter password"
                 value={password}
                 onChange={e => setPassword(e.target.value)}
-                required 
+                required
               />
             </label>
             <button className="btn-login" type="submit" disabled={loading}>

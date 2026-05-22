@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const API_BASE = 'http://localhost/Project';
+export const API_BASE = 'https://jojoscoops.kesug.com/Project';
 
 const cartApi = axios.create({
   baseURL: `${API_BASE}/backend/cart_api.php`,
